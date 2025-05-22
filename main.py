@@ -6,7 +6,7 @@ def load_penguins():
     print(df.head())
     return df.dropna()
 
-def split_data(df):
+def split_dataset(df):
     """ Split features and target """
     # Features 
     X = df.drop("species", axis=1)
@@ -17,7 +17,7 @@ def split_data(df):
 def main():
     # Load and split the data
     df = load_penguins()
-    X_train, X_test, y_train, y_test = split_data(df)
+    X_train, X_test, y_train, y_test = split_dataset(df)
     
     # Print the shapes
     print("Training set shape:", X_train.shape)
